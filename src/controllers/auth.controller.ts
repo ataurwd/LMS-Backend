@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
-import { registerUser, loginUser, handleGoogleOAuth, verifyToken, generateAccessToken, generateRefreshToken } from '../services/auth.service.js';
-import { registerSchema, loginSchema } from '../validations/auth.validation.js';
-import { UserModel } from '../models/user.model.js';
+import { registerUser, loginUser, handleGoogleOAuth, verifyToken, generateAccessToken, generateRefreshToken } from '../services/auth.service';
+import { registerSchema, loginSchema } from '../validations/auth.validation';
+import { UserModel } from '../models/user.model';
 
 const setRefreshTokenCookie = (res: Response, token: string) => {
   res.cookie('refreshToken', token, {

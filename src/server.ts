@@ -3,9 +3,9 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import * as dotenv from 'dotenv';
-import { connectDatabase } from './config/database.js';
-import authRoutes from './routes/v1/auth.routes.js';
-import { rateLimiter } from './middlewares/rateLimiter.js';
+import { connectDatabase } from './config/database';
+import authRoutes from './routes/v1/auth.routes';
+import { rateLimiter } from './middlewares/rateLimiter';
 
 // Load environment variables
 dotenv.config();
